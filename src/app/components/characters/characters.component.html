@@ -4,9 +4,9 @@
 </p>
  -->
 <div class="container">
-  <div *ngFor="let character of allCharacters | async" class="card" style="width: 18rem;">
+  <div *ngFor="let character of allCharacters" class="card" style="width: 18rem;">
     <a href="#">
-      <img class="card-img-top" src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="Character Thumbnail">
+      <img class="card-img-top" [src]=getImage(character) alt="Character Thumbnail">
     </a>
     <div class="card-body">
       <h5>{{ character.name }}</h5>
