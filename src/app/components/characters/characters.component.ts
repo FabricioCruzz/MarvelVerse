@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { concatMap, debounceTime, distinctUntilChanged, Observable, Subject } from 'rxjs';
+import { concatMap, debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 import { ImageTypes } from 'src/app/models/image.model';
 import { Category, MarvelRequestOptions } from 'src/app/models/request.model';
 import { ApiMarvelService } from 'src/app/services/api-marvel.service';
@@ -50,6 +50,13 @@ export class CharactersComponent implements OnInit {
     this.allCharacters = reset ? data.results : [...this.allCharacters, ...data.results]
     this.total = data.total
     this.options.offset = this.options.offset || data.offset
+  }
+
+  onScroll(){
+    const offset = this.options.offset + this.options.limit
+    if(offset < this.total) {
+      this.scroll$.next(offset)
+    }
   }
 
 }

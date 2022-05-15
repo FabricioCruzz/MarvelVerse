@@ -1,18 +1,32 @@
-.container {
+#title {
+  text-align: center;
   margin: 1.5rem;
+}
+
+/* .container {
+  margin: 1.5rem auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+} */
+
+.row {
+  margin-left: 8rem;
+  margin-right: 4rem;
 }
 
 .card {
   margin: 0.5rem;
   border: none;
+  border-radius: 1rem;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.521);
 }
 
-.card-img-top {
-  border-radius: 0.8rem;
+.card-title {
+  position: absolute;
+  bottom: 0;
+  text-shadow: 1px 1px 7px black;
 }
 
 .card-body {

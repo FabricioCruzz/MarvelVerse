@@ -7,7 +7,7 @@ import { SeriesComponent } from './components/series/series.component';
 import { StoriesComponent } from './components/stories/stories.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/characters', pathMatch: 'full'},
+  {path: '', redirectTo: 'characters', pathMatch: 'full'},
   {path: 'characters', component: CharactersComponent},
   {path: 'comics', component: ComicsComponent},
   {path: 'events', component: EventsComponent},

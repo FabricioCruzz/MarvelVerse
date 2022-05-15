@@ -11,6 +11,7 @@ import { EventsComponent } from './components/events/events.component';
 import { SeriesComponent } from './components/series/series.component';
 import { StoriesComponent } from './components/stories/stories.component';
 import { CharacterComponent } from './components/characters/character/character.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CharacterComponent } from './components/characters/character/character.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
