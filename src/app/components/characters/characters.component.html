@@ -1,20 +1,16 @@
-<!--
-<p *ngFor="let character of allCharacters | async">
-  {{ character | json }}
-</p>
- -->
-
- <div id="title">
-   <h1>Choose A Character For Details</h1>
+ <div id="container-title">
+   <h1 class="title text-white">Choose A Character For Details</h1>
  </div>
 
-<div class="row" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
-  <div *ngFor="let character of allCharacters" class="card bg-dark" style="width: 18rem;">
-    <a class="text-white" href="#">
-    <img class="card-img" [src]=getImage(character) alt="Character Thumbnail">
-    <div class="card-img-overlay">
-      <h5 class="card-title">{{ character.name }}</h5>
+   <div class="row blur" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+     <div *ngFor="let character of allCharacters" class="card bg-dark" style="width: 18rem;">
+       <div class="inner">
+         <a class="text-white" href="#">
+        <img class="card-img" [src]=getImage(character) alt="Character Thumbnail">
+        <div class="card-img-overlay">
+          <h5 class="card-title">{{ character.name }}</h5>
+        </div>
+      </a>
     </div>
-    </a>
   </div>
 </div>
