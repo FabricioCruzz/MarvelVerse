@@ -1,3 +1,5 @@
+import { ImageThumbanil } from "./image.model"
+
 export interface MarvelResponse {
 
   code: number
@@ -15,6 +17,22 @@ export interface MarvelData {
   limit: number
   total: number
   count: number
-  results: any[]
+  results: MarvelResults
+
+}
+
+export interface MarvelResults {
+
+  id: number
+  name: string
+  description: string
+  modified: Date
+  resourceURI: string
+  urls: any[]
+  thumbnail: ImageThumbanil
+  comics: any[]
+  stories: any[]
+  events: any[]
+  series: any[]
 
 }

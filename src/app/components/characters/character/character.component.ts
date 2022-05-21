@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageTypes } from 'src/app/models/image.model';
+import { MarvelResults } from 'src/app/models/response.model';
+import { ApiMarvelService } from 'src/app/services/api-marvel.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-character',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  constructor() { }
+  character: MarvelResults | any
+
+  constructor(
+    private service: ApiMarvelService,
+    private dataService: DataService
+    ) {}
 
   ngOnInit(): void {
+    this.character = this.dataService.getCharacter()
   }
 
+  getImage() {
+    const thumbnail = this.character.thumbnail
+    console.log(thumbnail)
+
+    return this.service.getImage(thumbnail, ImageTypes.landscape_xlarge)
+  }
 }

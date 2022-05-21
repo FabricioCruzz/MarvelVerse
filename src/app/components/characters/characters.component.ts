@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { concatMap, debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 import { ImageTypes } from 'src/app/models/image.model';
 import { Category, MarvelRequestOptions } from 'src/app/models/request.model';
+import { MarvelResults } from 'src/app/models/response.model';
 import { ApiMarvelService } from 'src/app/services/api-marvel.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-characters',
@@ -11,7 +13,10 @@ import { ApiMarvelService } from 'src/app/services/api-marvel.service';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor(private characterSvc: ApiMarvelService) { }
+  constructor(
+    private service: ApiMarvelService,
+    private dataService: DataService
+    ) { }
 
   category: Category = 'characters'
   allCharacters: any[] = []
@@ -37,13 +42,13 @@ export class CharactersComponent implements OnInit {
       distinctUntilChanged(),
       concatMap(offset => {
         this.options.offset = offset
-        return this.characterSvc.getData(this.category, this.options)
+        return this.service.getData(this.category, this.options)
       })
       ).subscribe(data => this.handleResponse(data))
   }
 
   getImage(character: any) {
-    return this.characterSvc.getImage(character.thumbnail, ImageTypes.portrait_uncanny)
+    return this.service.getImage(character.thumbnail, ImageTypes.portrait_uncanny)
   }
 
   handleResponse(data: any, reset: boolean = false) {
@@ -57,6 +62,10 @@ export class CharactersComponent implements OnInit {
     if(offset < this.total) {
       this.scroll$.next(offset)
     }
+  }
+
+  toCharacter(character: MarvelResults){
+    this.dataService.setCharacter(character)
   }
 
 }

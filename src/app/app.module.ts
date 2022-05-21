@@ -12,6 +12,7 @@ import { SeriesComponent } from './components/series/series.component';
 import { StoriesComponent } from './components/stories/stories.component';
 import { CharacterComponent } from './components/characters/character/character.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     EventsComponent,
     SeriesComponent,
     StoriesComponent,
-    CharacterComponent
+    CharacterComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

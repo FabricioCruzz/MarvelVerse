@@ -21,7 +21,7 @@ export class ApiMarvelService {
   // private BASE_URL = 'https://gateway.marvel.com/v1/public/'
   // private URL_CHARACTERS = this.BASE_URL + `characters?ts=1&limit=100&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`
 
-  private API_KEY = `&ts=1&apikey=${environment.publicKey}&hash=${environment.hash}`
+  private API_KEY = `&ts=1&limit=100&apikey=${environment.publicKey}&hash=${environment.hash}`
 
 
 
