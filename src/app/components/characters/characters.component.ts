@@ -27,7 +27,7 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit(): void {
     this.options = {
-      limit: 50,
+      limit: 100,
       offset: 0
     }
 

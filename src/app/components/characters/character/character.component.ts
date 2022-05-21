@@ -13,6 +13,11 @@ export class CharacterComponent implements OnInit {
 
   character: MarvelResults | any
 
+  titleComics: string = 'Comics'
+  titleEvents: string = 'Events'
+  titleSeries: string = 'Series'
+  titleStories: string = 'Stories'
+
   constructor(
     private service: ApiMarvelService,
     private dataService: DataService
@@ -24,8 +29,6 @@ export class CharacterComponent implements OnInit {
 
   getImage() {
     const thumbnail = this.character.thumbnail
-    console.log(thumbnail)
-
     return this.service.getImage(thumbnail, ImageTypes.landscape_xlarge)
   }
 }

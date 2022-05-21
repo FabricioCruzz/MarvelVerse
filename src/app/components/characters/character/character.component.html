@@ -1,14 +1,18 @@
-<div class="card blur">
+<div *ngIf="character" class="card blur">
 
+  <h2 class="card-title title text-white">{{ character.name }}</h2>
   <img class="card-img-top" [src]="getImage()" alt="Character Landscape">
 
   <div class="card-body">
-    <h2 class="card-title title text-white">{{ character.name }}</h2>
+
     <p class="card-text text-white">{{ character.description }}</p>
   </div>
 
-  <app-list [items]="character.comics.items"></app-list>
-  <app-list [items]="character.stories.items"></app-list>
-  <app-list [items]="character.events.items"></app-list>
-  <app-list [items]="character.series.items"></app-list>
+  <app-list title="Comics" [items]="character.comics.items"></app-list>
+
+  <app-list title="Stories" [items]="character.stories.items"></app-list>
+
+  <app-list title="Events" [items]="character.events.items"></app-list>
+
+  <app-list title="Series" [items]="character.series.items"></app-list>
 </div>

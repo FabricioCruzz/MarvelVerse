@@ -5,6 +5,13 @@
 
 .title, .card-text {
   text-shadow: 1px 1px 7px black;
+  font-weight: 500;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1.25rem;
 }
 
 .blur {
@@ -14,7 +21,7 @@
 }
 
 .card {
-  margin: auto;
+  margin: 2rem auto;
   width: 80%;
   padding: 0.5rem;
   box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.521);

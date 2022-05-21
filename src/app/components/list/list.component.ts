@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   @Input()
+  title: string = ''
+
+  @Input()
   items: any[] = []
 
   constructor() { }
