@@ -8,11 +8,11 @@
     <p class="card-text text-white">{{ character.description }}</p>
   </div>
 
-  <app-list title="Comics" [items]="character.comics.items"></app-list>
+  <app-list [title]="titles[0]" [items]="character.comics.items"></app-list>
 
-  <app-list title="Stories" [items]="character.stories.items"></app-list>
+  <app-list [title]="titles[1]" [items]="character.stories.items"></app-list>
 
-  <app-list title="Events" [items]="character.events.items"></app-list>
+  <app-list [title]="titles[2]" [items]="character.events.items"></app-list>
 
-  <app-list title="Series" [items]="character.series.items"></app-list>
+  <app-list [title]="titles[3]" [items]="character.series.items"></app-list>
 </div>

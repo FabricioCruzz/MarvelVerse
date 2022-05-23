@@ -17,11 +17,11 @@ export interface MarvelData {
   limit: number
   total: number
   count: number
-  results: MarvelResults
+  results: any[]
 
 }
 
-export interface MarvelResults {
+export interface MarvelCharacterResults {
 
   id: number
   name: string
@@ -34,5 +34,39 @@ export interface MarvelResults {
   stories: any[]
   events: any[]
   series: any[]
+
+}
+
+export interface MarvelComicsResults {
+
+  id: number,
+  digitalId: number,
+  title: string,
+  issueNumber: number,
+  variantDescription: string,
+  description: string,
+  modified: Date,
+  isbn: string,
+  upc: string,
+  diamondCode: string,
+  ean: string,
+  issn: string,
+  format: string,
+  pageCount: number,
+  textObjects: any[],
+  resourceURI: string,
+  urls: any[],
+  series: any,
+  variants: any[],
+  collections: any[],
+  collectedIssues: any[],
+  dates: any[],
+  prices: any[],
+  thumbnail: ImageThumbanil,
+  images: any[],
+  creators: any,
+  characters: any,
+  stories: any,
+  events: any
 
 }

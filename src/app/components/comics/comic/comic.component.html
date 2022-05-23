@@ -1,0 +1,20 @@
+<div *ngIf="comic" class="card blur">
+
+  <h2 class="card-title title text-white">{{ comic.title }}</h2>
+  <img class="card-img-top" [src]="getImage()" alt="Comic Landscape">
+
+  <div class="card-body">
+
+    <p class="card-text text-white">{{ comic.description }}</p>
+  </div>
+
+  <app-list [title]="titles[0]" [items]="comic.creators.items"></app-list>
+
+  <app-list [title]="titles[1]" [items]="comic.characters.items"></app-list>
+
+  <app-list [title]="titles[2]" [items]="comic.stories.items"></app-list>
+
+  <app-list [title]="titles[3]" [items]="comic.events.items"></app-list>
+
+  <app-list [title]="titles[4]" [items]="comic.series.items"></app-list>
+</div>

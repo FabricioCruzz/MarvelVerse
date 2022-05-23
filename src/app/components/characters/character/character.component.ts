@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageTypes } from 'src/app/models/image.model';
-import { MarvelResults } from 'src/app/models/response.model';
+import { MarvelCharacterResults } from 'src/app/models/response.model';
 import { ApiMarvelService } from 'src/app/services/api-marvel.service';
 import { DataService } from 'src/app/services/data.service';
 
@@ -11,12 +11,14 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CharacterComponent implements OnInit {
 
-  character: MarvelResults | any
+  character: MarvelCharacterResults | any
 
-  titleComics: string = 'Comics'
-  titleEvents: string = 'Events'
-  titleSeries: string = 'Series'
-  titleStories: string = 'Stories'
+  titles: string[] = [
+    'Comics',
+    'Events',
+    'Series',
+    'Stories'
+  ]
 
   constructor(
     private service: ApiMarvelService,

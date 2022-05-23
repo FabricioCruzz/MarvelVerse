@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { MarvelResults } from '../models/response.model';
+import { MarvelCharacterResults, MarvelComicsResults } from '../models/response.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  private character: MarvelResults | any
+  private character: MarvelCharacterResults | any
 
   constructor() { }
 
-  setCharacter(character: MarvelResults){
+  setCharacter(character: MarvelCharacterResults | MarvelComicsResults){
     this.character = character
   }
 

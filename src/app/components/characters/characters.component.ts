@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { concatMap, debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 import { ImageTypes } from 'src/app/models/image.model';
 import { Category, MarvelRequestOptions } from 'src/app/models/request.model';
-import { MarvelResults } from 'src/app/models/response.model';
+import { MarvelCharacterResults } from 'src/app/models/response.model';
 import { ApiMarvelService } from 'src/app/services/api-marvel.service';
 import { DataService } from 'src/app/services/data.service';
 
@@ -24,6 +24,8 @@ export class CharactersComponent implements OnInit {
   options!: MarvelRequestOptions
 
   scroll$ = new Subject<number>()
+
+  title: string = 'Choose A Character To Details'
 
   ngOnInit(): void {
     this.options = {
@@ -64,7 +66,7 @@ export class CharactersComponent implements OnInit {
     }
   }
 
-  toCharacter(character: MarvelResults){
+  toCharacter(character: MarvelCharacterResults){
     this.dataService.setCharacter(character)
   }
 
