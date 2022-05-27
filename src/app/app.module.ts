@@ -15,6 +15,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ListComponent } from './components/list/list.component';
 import { CardTemplateComponent } from './components/card-template/card-template.component';
 import { ComicComponent } from './components/comics/comic/comic.component';
+import { SerieComponent } from './components/series/serie/serie.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ComicComponent } from './components/comics/comic/comic.component';
     CharacterComponent,
     ListComponent,
     CardTemplateComponent,
-    ComicComponent
+    ComicComponent,
+    SerieComponent
   ],
   imports: [
     BrowserModule,

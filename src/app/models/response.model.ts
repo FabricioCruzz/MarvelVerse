@@ -70,3 +70,25 @@ export interface MarvelComicsResults {
   events: any
 
 }
+
+export interface MarvelSeriesResults {
+
+  id: number,
+  title: string,
+  description: string,
+  resourceURI: string,
+  urls: any[],
+  startYear: number,
+  endYear: number,
+  rating:string,
+  modified: Date,
+  thumbnail: ImageThumbanil,
+  comics: any,
+  stories: any,
+  events: any,
+  characters: any,
+  creators:any,
+  next: any,
+  previous:any
+  
+}

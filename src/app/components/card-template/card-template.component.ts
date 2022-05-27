@@ -23,7 +23,7 @@ export class CardTemplateComponent implements OnInit {
   }
 
   toCharacter(character: MarvelCharacterResults){
-    this.dataService.setCharacter(character)
+    this.dataService.setData(character)
   }
 
 }

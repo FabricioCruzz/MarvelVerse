@@ -60,13 +60,10 @@ export class ComicsComponent implements OnInit {
       this.allComics = reset ? data.results : [...this.allComics, ...data.results]
       this.total = data.offset
       this.options.offset = this.options.offset || data.offset
-      console.log('Data: ' + data)
-
-      console.log(this.allComics)
   }
 
   toComic(comic: MarvelComicsResults) {
-    this.dataService.setCharacter(comic)
+    this.dataService.setData(comic)
   }
 
 }

@@ -26,7 +26,7 @@ export class CharacterComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    this.character = this.dataService.getCharacter()
+    this.character = this.dataService.getData()
   }
 
   getImage() {

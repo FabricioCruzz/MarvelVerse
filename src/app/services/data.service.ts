@@ -6,15 +6,15 @@ import { MarvelCharacterResults, MarvelComicsResults } from '../models/response.
 })
 export class DataService {
 
-  private character: MarvelCharacterResults | any
+  private data: any
 
   constructor() { }
 
-  setCharacter(character: MarvelCharacterResults | MarvelComicsResults){
-    this.character = character
+  setData(data: any){
+    this.data = data
   }
 
-  getCharacter(){
-    return this.character
+  getData(){
+    return this.data
   }
 }

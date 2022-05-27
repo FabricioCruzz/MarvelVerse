@@ -67,7 +67,7 @@ export class CharactersComponent implements OnInit {
   }
 
   toCharacter(character: MarvelCharacterResults){
-    this.dataService.setCharacter(character)
+    this.dataService.setData(character)
   }
 
 }
