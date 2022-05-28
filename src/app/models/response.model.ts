@@ -92,3 +92,21 @@ export interface MarvelSeriesResults {
   previous:any
   
 }
+
+export interface MarvelStoriesResults {
+
+  id: number,
+  title: string,
+  description: string,
+  resourceURI: string,
+  type: string,
+  modified: Date,
+  thumbnail: ImageThumbanil,
+  comics: any[],
+  series: any[],
+  events: any[],
+  characters: any[],
+  creators: any[],
+  originalissue: any[]
+
+}

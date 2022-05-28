@@ -16,6 +16,7 @@ import { ListComponent } from './components/list/list.component';
 import { CardTemplateComponent } from './components/card-template/card-template.component';
 import { ComicComponent } from './components/comics/comic/comic.component';
 import { SerieComponent } from './components/series/serie/serie.component';
+import { StoryComponent } from './components/stories/story/story.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SerieComponent } from './components/series/serie/serie.component';
     ListComponent,
     CardTemplateComponent,
     ComicComponent,
-    SerieComponent
+    SerieComponent,
+    StoryComponent
   ],
   imports: [
     BrowserModule,
