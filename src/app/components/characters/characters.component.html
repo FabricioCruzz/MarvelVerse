@@ -1,16 +1,2 @@
- <div id="container-title">
-   <h1 class="title text-white">{{ title }}</h1>
- </div>
+<app-card-template [title]="title" [page]="page" key="name" [category]="category"></app-card-template>
 
- <div class="row blur" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
-   <div *ngFor="let character of allCharacters" class="card bg-dark" style="width: 18rem;">
-     <div class="inner">
-       <a class="text-white" routerLink="/character" (click)="toCharacter(character)">
-         <img class="card-img" [src]=getImage(character) alt="Character Thumbnail">
-         <div class="card-img-overlay">
-           <h5 class="card-title">{{ character.name }}</h5>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>

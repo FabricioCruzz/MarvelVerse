@@ -1,16 +1,1 @@
-<div id="container-title">
-  <h1 class="title text-white">{{ title }}</h1>
-</div>
-
-<div class="row blur">
-  <div *ngFor="let event of allEvents" class="card bg-dark" style="width: 18rem;">
-    <div class="inner">
-      <a class="text-white" routerLink="/event" (click)="toEvent(event)">
-        <img class="card-img" [src]=getImage(event) alt="Character Thumbnail">
-        <div class="card-img-overlay">
-          <h5 class="card-title">{{ event.title }}</h5>
-         </div>
-       </a>
-     </div>
-   </div>
- </div>
+<app-card-template [title]="title" [page]="page" key="title" [category]="category"></app-card-template>

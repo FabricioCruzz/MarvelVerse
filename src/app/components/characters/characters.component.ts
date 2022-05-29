@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { concatMap, debounceTime, distinctUntilChanged, Subject } from 'rxjs';
-import { ImageTypes } from 'src/app/models/image.model';
-import { Category, MarvelRequestOptions } from 'src/app/models/request.model';
-import { MarvelCharacterResults } from 'src/app/models/response.model';
-import { ApiMarvelService } from 'src/app/services/api-marvel.service';
-import { DataService } from 'src/app/services/data.service';
+import { Category } from 'src/app/models/request.model';
 
 @Component({
   selector: 'app-characters',
@@ -13,61 +8,14 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor(
-    private service: ApiMarvelService,
-    private dataService: DataService
-    ) { }
+  constructor() { }
 
-  category: Category = 'characters'
-  allCharacters: any[] = []
-  total = 0
-  options!: MarvelRequestOptions
-
-  scroll$ = new Subject<number>()
-
-  title: string = 'Choose A Character To Details'
+    title: string = 'Choose A Character To Details'
+    category: Category = 'characters'
+    page: string = '/character'
 
   ngOnInit(): void {
-    this.options = {
-      limit: 100,
-      offset: 0
-    }
 
-    this.getCharacters()
-
-    this.scroll$.next(0)
-  }
-
-  getCharacters(){
-    this.scroll$.pipe(
-      debounceTime(400),
-      distinctUntilChanged(),
-      concatMap(offset => {
-        this.options.offset = offset
-        return this.service.getData(this.category, this.options)
-      })
-      ).subscribe(data => this.handleResponse(data))
-  }
-
-  getImage(character: any) {
-    return this.service.getImage(character.thumbnail, ImageTypes.portrait_uncanny)
-  }
-
-  handleResponse(data: any, reset: boolean = false) {
-    this.allCharacters = reset ? data.results : [...this.allCharacters, ...data.results]
-    this.total = data.total
-    this.options.offset = this.options.offset || data.offset
-  }
-
-  onScroll(){
-    const offset = this.options.offset + this.options.limit
-    if(offset < this.total) {
-      this.scroll$.next(offset)
-    }
-  }
-
-  toCharacter(character: MarvelCharacterResults){
-    this.dataService.setData(character)
   }
 
 }

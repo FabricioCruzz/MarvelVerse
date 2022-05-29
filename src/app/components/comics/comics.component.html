@@ -1,16 +1,1 @@
-<div id="container-title">
-  <h1 class="title text-white">{{ title }}</h1>
-</div>
-
-<div class="row blur">
-  <div *ngFor="let comic of allComics" class="card bg-dark" style="width: 18rem;">
-    <div class="inner">
-      <a class="text-white" routerLink="/comic" (click)="toComic(comic)">
-        <img class="card-img" [src]=getImage(comic) alt="Character Thumbnail">
-        <div class="card-img-overlay">
-          <h5 class="card-title">{{ comic.title }}</h5>
-         </div>
-       </a>
-     </div>
-   </div>
- </div>
+<app-card-template [title]="title" [page]="page" key="title" [category]="category"></app-card-template>

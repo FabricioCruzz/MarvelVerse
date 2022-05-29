@@ -11,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './stories.component.html',
   styleUrls: [
     './stories.component.css',
-    '../characters/characters.component.css'
+    '../card-template/card-template.component.css'
   ]
 })
 export class StoriesComponent implements OnInit {
@@ -65,7 +65,7 @@ export class StoriesComponent implements OnInit {
 
   toStory(story: MarvelStoriesResults){
     this.dataService.setData(story)
-  
+
 
   }
 

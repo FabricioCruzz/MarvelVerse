@@ -1,16 +1,1 @@
-<div id="container-title">
-    <h1 class="title text-white">{{ title }}</h1>
-  </div>
-  
-  <div class="row blur">
-    <div *ngFor="let serie of allSeries" class="card bg-dark" style="width: 18rem;">
-      <div class="inner">
-        <a class="text-white" routerLink="/serie" (click)="toSerie(serie)">
-          <img class="card-img" [src]=getImage(serie) alt="Character Thumbnail">
-          <div class="card-img-overlay">
-            <h5 class="card-title">{{ serie.title }}</h5>
-           </div>
-         </a>
-       </div>
-     </div>
-   </div>
+<app-card-template [title]="title" [page]="page" key="title" [category]="category"></app-card-template>
