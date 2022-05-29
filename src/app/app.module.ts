@@ -17,6 +17,7 @@ import { CardTemplateComponent } from './components/card-template/card-template.
 import { ComicComponent } from './components/comics/comic/comic.component';
 import { SerieComponent } from './components/series/serie/serie.component';
 import { StoryComponent } from './components/stories/story/story.component';
+import { EventComponent } from './components/events/event/event.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { StoryComponent } from './components/stories/story/story.component';
     CardTemplateComponent,
     ComicComponent,
     SerieComponent,
-    StoryComponent
+    StoryComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

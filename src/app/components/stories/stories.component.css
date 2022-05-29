@@ -1,0 +1,18 @@
+.list-group {
+  width: 95%;
+}
+
+.list-group > a {
+  margin: 0.2rem 1rem;
+  border: none;
+  width: 95%;
+  background-color: inherit;
+  border-color: unset;
+  font-weight: 500;
+  text-shadow: 1px 1px 7px black;
+}
+
+h5.mb-1 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}

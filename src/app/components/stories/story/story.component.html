@@ -1,1 +1,19 @@
-<p>story works!</p>
+<div *ngIf="story" class="card blur">
+
+  <h2 class="card-title title text-white">{{ subtitle }} - {{ story.id }}</h2>
+
+  <div class="card-body">
+
+    <p class="card-text text-white">{{ story.title }}</p>
+  </div>
+
+  <app-list [title]="titles[0]" [items]="story.creators.items"></app-list>
+
+  <app-list [title]="titles[1]" [items]="story.characters.items"></app-list>
+
+  <app-list [title]="titles[2]" [items]="story.comics.items"></app-list>
+
+  <app-list [title]="titles[3]" [items]="story.series.items"></app-list>
+
+  <app-list [title]="titles[4]" [items]="story.events.items"></app-list>
+</div>

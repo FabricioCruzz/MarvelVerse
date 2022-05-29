@@ -61,11 +61,12 @@ export class StoriesComponent implements OnInit {
     this.allStories = reset ? data.results : [...this.allStories, ...data.results]
     this.total = data.total
     this.options.offset = this.options.offset || data.offset
-    console.log(this.allStories)
   }
 
   toStory(story: MarvelStoriesResults){
     this.dataService.setData(story)
+  
+
   }
 
 }
