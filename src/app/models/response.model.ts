@@ -39,74 +39,95 @@ export interface MarvelCharacterResults {
 
 export interface MarvelComicsResults {
 
-  id: number,
-  digitalId: number,
-  title: string,
-  issueNumber: number,
-  variantDescription: string,
-  description: string,
-  modified: Date,
-  isbn: string,
-  upc: string,
-  diamondCode: string,
-  ean: string,
-  issn: string,
-  format: string,
-  pageCount: number,
-  textObjects: any[],
-  resourceURI: string,
-  urls: any[],
-  series: any,
-  variants: any[],
-  collections: any[],
-  collectedIssues: any[],
-  dates: any[],
-  prices: any[],
-  thumbnail: ImageThumbanil,
-  images: any[],
-  creators: any,
-  characters: any,
-  stories: any,
+  id: number
+  digitalId: number
+  title: string
+  issueNumber: number
+  variantDescription: string
+  description: string
+  modified: Date
+  isbn: string
+  upc: string
+  diamondCode: string
+  ean: string
+  issn: string
+  format: string
+  pageCount: number
+  textObjects: any[]
+  resourceURI: string
+  urls: any[]
+  series: any
+  variants: any[]
+  collections: any[]
+  collectedIssues: any[]
+  dates: any[]
+  prices: any[]
+  thumbnail: ImageThumbanil
+  images: any[]
+  creators: any
+  characters: any
+  stories: any
   events: any
 
 }
 
 export interface MarvelSeriesResults {
 
-  id: number,
-  title: string,
-  description: string,
-  resourceURI: string,
-  urls: any[],
-  startYear: number,
-  endYear: number,
-  rating:string,
-  modified: Date,
-  thumbnail: ImageThumbanil,
-  comics: any,
-  stories: any,
-  events: any,
-  characters: any,
-  creators:any,
-  next: any,
+  id: number
+  title: string
+  description: string
+  resourceURI: string
+  urls: any[]
+  startYear: number
+  endYear: number
+  rating:string
+  modified: Date
+  thumbnail: ImageThumbanil
+  comics: any
+  stories: any
+  events: any
+  characters: any
+  creators:any
+  next: any
   previous:any
-  
+
 }
 
 export interface MarvelStoriesResults {
 
-  id: number,
-  title: string,
-  description: string,
-  resourceURI: string,
-  type: string,
-  modified: Date,
-  thumbnail: ImageThumbanil,
-  comics: any[],
-  series: any[],
-  events: any[],
-  characters: any[],
-  creators: any[],
-  originalissue: any[]
+  id: number
+  title: string
+  description: string
+  resourceURI: string
+  type: string
+  modified: Date
+  thumbnail: ImageThumbanil
+  comics: any
+  series: any
+  events: any
+  characters: any
+  creators: any
+  originalissue: any
+
+}
+
+export interface MarvelEventsResults {
+
+  id: number
+  title: string
+  description: string
+  resourceURI: string
+  urls: any[]
+  modified: Date
+  start: Date
+  end: Date
+  thumbnail: ImageThumbanil
+  comics: any
+  stories: any
+  series: any
+  characters: any
+  creators: any
+  next: any
+  previous: any
 
 }

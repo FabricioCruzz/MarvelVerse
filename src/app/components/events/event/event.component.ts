@@ -1,15 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageTypes } from 'src/app/models/image.model';
+import { MarvelEventsResults } from 'src/app/models/response.model';
+import { ApiMarvelService } from 'src/app/services/api-marvel.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  styleUrls: [
+    './event.component.css',
+    '../../characters/character/character.component.css'
+  ]
 })
 export class EventComponent implements OnInit {
 
-  constructor() { }
+  event: MarvelEventsResults | any
+
+  titles: string[] = [
+    'Creators',
+    'Characters',
+    'Comics',
+    'Stories',
+    'Series'
+  ]
+
+  constructor(
+    private service: ApiMarvelService,
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
+    this.event = this.dataService.getData()
+  }
+
+  getImage(){
+    const thumbnail = this.event.thumbnail
+    return this.service.getImage(thumbnail, ImageTypes.portrait_uncanny)
   }
 
 }

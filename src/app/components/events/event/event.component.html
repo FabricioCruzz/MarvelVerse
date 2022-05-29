@@ -1,1 +1,21 @@
-<p>event works!</p>
+<div *ngIf="event" class="card blur">
+
+  <h2 class="card-title title text-white">{{ event.title }}</h2>
+  <img class="card-img-top" [src]="getImage()" alt="Event Portrait">
+
+  <div class="card-body">
+
+    <p class="card-text text-white">{{ event.description }}</p>
+  </div>
+
+  <app-list [title]="titles[0]" [items]="event.creators.items"></app-list>
+
+  <app-list [title]="titles[1]" [items]="event.characters.items"></app-list>
+
+  <app-list [title]="titles[2]" [items]="event.comics.items"></app-list>
+
+  <app-list [title]="titles[3]" [items]="event.stories.items"></app-list>
+
+  <app-list [title]="titles[4]" [items]="event.series.items"></app-list>
+
+</div>

@@ -2,21 +2,20 @@
 
     <h2 class="card-title title text-white">{{ serie.title }}</h2>
     <img class="card-img-top" [src]="getImage()" alt="Serie Portrait">
-  
+
     <div class="card-body">
-  
+
       <p class="card-text text-white">{{ serie.description }}</p>
     </div>
-  
+
     <app-list [title]="titles[0]" [items]="serie.creators.items"></app-list>
-  
+
     <app-list [title]="titles[1]" [items]="serie.characters.items"></app-list>
-  
-    <app-list [title]="titles[4]" [items]="serie.comics.items"></app-list>
-    
-    <app-list [title]="titles[2]" [items]="serie.stories.items"></app-list>
-  
-    <app-list [title]="titles[3]" [items]="serie.events.items"></app-list>
-  
+
+    <app-list [title]="titles[2]" [items]="serie.comics.items"></app-list>
+
+    <app-list [title]="titles[3]" [items]="serie.stories.items"></app-list>
+
+    <app-list [title]="titles[4]" [items]="serie.events.items"></app-list>
+
   </div>
-  

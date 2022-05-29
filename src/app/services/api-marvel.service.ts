@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { ImageThumbanil, ImageTypes } from '../models/image.model';
 import { Category, MarvelRequestOptions } from '../models/request.model';
 import { MarvelData, MarvelResponse } from '../models/response.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,10 @@ export class ApiMarvelService {
 
   private API_KEY = `&ts=1&limit=100&apikey=${environment.publicKey}&hash=${environment.hash}`
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router
+    ) { }
 
   getImage(thumbnail: ImageThumbanil, type: ImageTypes = ImageTypes.full) {
     return thumbnail && `${thumbnail.path}/${type}.${thumbnail.extension}`
