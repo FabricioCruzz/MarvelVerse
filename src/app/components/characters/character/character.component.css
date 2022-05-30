@@ -38,3 +38,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+  .card-img-top {
+    width: 80%;
+  }
+}

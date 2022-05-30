@@ -8,7 +8,10 @@ import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-comic',
   templateUrl: './comic.component.html',
-  styleUrls: ['./comic.component.css']
+  styleUrls: [
+    './comic.component.css',
+    '../../characters/character/character.component.css'
+  ]
 })
 export class ComicComponent implements OnInit {
 

@@ -34,6 +34,6 @@ export class CharacterComponent implements OnInit {
 
   getImage() {
     const thumbnail = this.character.thumbnail
-    return this.service.getImage(thumbnail, ImageTypes.landscape_xlarge)
+    return this.service.getImage(thumbnail, ImageTypes.portrait_uncanny)
   }
 }
