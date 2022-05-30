@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, Input, OnInit } from '@angular/core';
 import { concatMap, debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 import { ImageTypes } from 'src/app/models/image.model';
 import { Category, MarvelRequestOptions } from 'src/app/models/request.model';
@@ -11,12 +12,6 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./card-template.component.css']
 })
 export class CardTemplateComponent implements OnInit {
-
-  constructor(
-    private service: ApiMarvelService,
-    private dataService: DataService
-  ) { }
-
 
   //String que representa o caminho para o routerLink. Por exemplo: '/character'
   @Input()
@@ -40,6 +35,16 @@ export class CardTemplateComponent implements OnInit {
   options!: MarvelRequestOptions
 
   scroll$ = new Subject<number>()
+
+  showButton = false
+
+  scrollHeight = 500
+
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private service: ApiMarvelService,
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
     this.options = {
@@ -82,6 +87,17 @@ export class CardTemplateComponent implements OnInit {
 
   toDetails(item: any){
     this.dataService.setData(item)
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(){
+    const yOffSet = window.pageYOffset
+    const scrollTop = this.document.documentElement.scrollTop
+    this.showButton = (yOffSet || scrollTop) > this.scrollHeight
+  }
+
+  onScrollTop(){
+    this.document.documentElement.scrollTop = 0
   }
 
 }

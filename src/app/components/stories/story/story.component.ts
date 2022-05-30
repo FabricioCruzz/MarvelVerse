@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ImageTypes } from 'src/app/models/image.model';
 import { MarvelStoriesResults } from 'src/app/models/response.model';
 import { ApiMarvelService } from 'src/app/services/api-marvel.service';
@@ -27,14 +28,14 @@ export class StoryComponent implements OnInit {
   subtitle = 'Story'
 
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     private service: ApiMarvelService,
     private dataService: DataService
   ) { }
 
   ngOnInit(): void {
     this.story = this.dataService.getData()
-    console.log(this.story)
-
+    this.document.documentElement.scrollTop
   }
 
   getImage(){

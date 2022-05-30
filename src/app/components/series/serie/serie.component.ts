@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ImageTypes } from 'src/app/models/image.model';
 import { MarvelSeriesResults } from 'src/app/models/response.model';
 import { ApiMarvelService } from 'src/app/services/api-marvel.service';
@@ -25,12 +26,14 @@ export class SerieComponent implements OnInit {
   ]
 
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     private service: ApiMarvelService,
     private dataService: DataService
   ) { }
 
   ngOnInit(): void {
     this.serie = this.dataService.getData()
+    this.document.documentElement.scrollTop
   }
 
   getImage(){
