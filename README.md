@@ -1,5 +1,7 @@
 # MaverVerse
+This project was developed using Angular in conjunction with the [Marvel API](https://developer.marvel.com/).
 
+## About the Angular CLI
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server
@@ -20,4 +22,21 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Credits
 
-The construction of the api service was adapted from the user [ZakiMohammed] (https://github.com/ZakiMohammed/ng-marvel-app).
+The construction of the API service was adapted from the github user [ZakiMohammed](https://github.com/ZakiMohammed/ng-marvel-app).
+
+## This project in on Heroku! Check it out!
+
+> <a href="https://marvel-verse.herokuapp.com/">MarvelVerse</a>
+
+### Author
+
+<a href="https://www.linkedin.com/in/fabricio-adriano-cruz/">
+ <img style="border-radius: 50%;" src="https://github.com/FabricioCruzz.png" width="100px;" alt="Autor_Fabricio_Cruz"/>
+ <br />
+ <sub><b>Fabricio Cruz</b></sub></a> <a href="https://www.linkedin.com/in/fabricio-adriano-cruz/"></a>
+
+
+If you like it... 👋🏽 Contact!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Fabricio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fabricio-adriano-cruz/)](https://www.linkedin.com/in/fabricio-adriano-cruz/) 
+[![Gmail Badge](https://img.shields.io/badge/-fabriciocruzz77@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:fabriciocruzz77@gmail.com)](mailto:fabriciocruzz77@gmail.com)
