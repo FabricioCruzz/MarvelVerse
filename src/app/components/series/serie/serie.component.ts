@@ -33,7 +33,7 @@ export class SerieComponent implements OnInit {
 
   ngOnInit(): void {
     this.serie = this.dataService.getData()
-    this.document.documentElement.scrollTop
+    document.documentElement.scrollTop = 0
   }
 
   getImage(){

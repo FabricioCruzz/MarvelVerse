@@ -35,7 +35,7 @@ export class StoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.story = this.dataService.getData()
-    this.document.documentElement.scrollTop
+    document.documentElement.scrollTop = 0
   }
 
   getImage(){

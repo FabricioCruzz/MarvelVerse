@@ -32,7 +32,7 @@ export class ComicComponent implements OnInit {
 
   ngOnInit(): void {
     this.comic = this.dataService.getData()
-    this.document.documentElement.scrollTop
+    document.documentElement.scrollTop = 0
   }
 
   getImage(){

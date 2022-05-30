@@ -33,7 +33,7 @@ export class EventComponent implements OnInit {
 
   ngOnInit(): void {
     this.event = this.dataService.getData()
-    this.document.documentElement.scrollTop
+    document.documentElement.scrollTop = 0
   }
 
   getImage(){

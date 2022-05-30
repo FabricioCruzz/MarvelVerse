@@ -29,7 +29,7 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
     this.character = this.dataService.getData()
-    this.document.documentElement.scrollTop
+    document.documentElement.scrollTop = 0
   }
 
   getImage() {
