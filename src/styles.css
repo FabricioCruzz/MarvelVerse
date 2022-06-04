@@ -39,7 +39,7 @@ body {
   height: 100%;
 }
 
-body {
+html, body {
   background-image: url(assets/images/bkg-marvel-4.png);
   background-repeat: repeat;
 }
