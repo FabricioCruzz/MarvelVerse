@@ -1,4 +1,4 @@
-# MaverVerse
+# MarvelVerse
 This project was developed using Angular in conjunction with the [Marvel API](https://developer.marvel.com/).
 
 ## About the Angular CLI
