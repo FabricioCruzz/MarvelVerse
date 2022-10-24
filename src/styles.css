@@ -41,5 +41,8 @@ body {
 
 html, body {
   background-image: url(assets/images/bkg-marvel-4.png);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
