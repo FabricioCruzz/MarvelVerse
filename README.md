@@ -24,9 +24,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 The construction of the API service was adapted from the github user [ZakiMohammed](https://github.com/ZakiMohammed/ng-marvel-app).
 
-## This project in on Heroku! Check it out!
+## This project in on Vercel! Check it out!
 
-> <a href="https://marvel-verse.herokuapp.com/">MarvelVerse</a>
+> [MarvelVerse](https://marvel-verse-green.vercel.app/characters)
 
 ### Author
 
